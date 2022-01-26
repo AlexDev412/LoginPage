@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, Image, ImageBackground, TouchableOpacity, TextInput } from 'react-native';
+import {  StyleSheet, View, Text, Image, ImageBackground, TouchableOpacity, TextInput } from 'react-native';
 import { Button } from 'react-native-elements';
 
 export default class Login extends Component {
@@ -36,7 +36,7 @@ export default class Login extends Component {
           />
         </View>
         <View  style={styles.otherLogin}>
-            <Button
+            {/* <Button
             buttonStyle={{
               width: 45,
               height: 45,
@@ -67,7 +67,18 @@ export default class Login extends Component {
               marginHorizontal: "1%",
               marginTop: "10%",
             }}
-            />
+            /> */}
+            <TouchableOpacity style={styles.test}>
+              <Image style={styles.ImageIconStyle} source={require ('../assets/Logo/ant-design_apple-filled.png')}/>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.test}>
+              <Image style={styles.ImageIconStyle} source={require ('../assets/Logo/flat-color-icons_google.png')}/>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.test}>
+              <Image style={styles.ImageIconStyle} source={require ('../assets/Logo/logos_facebook.png')}/>
+            </TouchableOpacity>
         </View>
         
         </View>
@@ -110,5 +121,25 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignSelf: 'flex-start',
     flexWrap: 'wrap',
-  }
+  },
+  test: {
+  flexDirection: 'row',
+  alignSelf: 'flex-start',
+  marginHorizontal: "1%",
+  marginTop: "10%",
+  backgroundColor: 'white',
+  borderColor: '#fff',
+  alignItems: 'center',
+  height: 45,
+  width: 45,
+  borderRadius: 5,
+  },
+  ImageIconStyle: {
+    padding: 10,
+    margin: 10,
+    height: 25,
+    width: 25,
+    resizeMode : 'stretch',
+ 
+ },
 });
